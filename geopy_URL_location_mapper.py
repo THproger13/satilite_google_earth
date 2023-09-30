@@ -3,7 +3,7 @@ import webbrowser
 # 사용자 음성명령에서 추출한 지역명
 
 
-user_location = "롯데월드"
+user_location = "광화문"
 
 # Geopy를 사용하여 지역명을 좌표로 변환
 geolocator = Nominatim(user_agent='South Korea', timeout=None)

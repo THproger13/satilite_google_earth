@@ -5,7 +5,7 @@ import time
 api_key = "AIzaSyDjb2nlzcWFbaInEqtarv2OIEyM2nZh8lM"  # 실제 API 키를 여기에 입력하세요.
 geolocator = Nominatim(user_agent='South Korea', timeout=None)
 
-user_location = "문학경기장"
+user_location = "구월동 로데오거리"
 location = geolocator.geocode(user_location)
 
 latitude, longitude = location.latitude, location.longitude  # 위도와 경도를 지정합니다.
@@ -25,7 +25,7 @@ def fetch_places(url):
             next_page_token = result.get('next_page_token')
             if next_page_token:
                 url = f"{url}&pagetoken={next_page_token}"
-                time.sleep(5)  # API의 제한으로 인해 다음 페이지 요청 전에 약간의 대기 시간이 필요합니다.
+                time.sleep(2)  # API의 제한으로 인해 다음 페이지 요청 전에 약간의 대기 시간이 필요합니다.
             else:
                 url = None
         else:
